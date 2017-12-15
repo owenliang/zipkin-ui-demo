@@ -82,6 +82,7 @@ $.getScript("data.js", function (response, status) {
         var node = stack.shift()
         if (parentIndex[node.span.id]) {
             var children = parentIndex[node.span.id]
+            // TODO: 按cs排序
             for (var i = 0; i < children.length; ++i) {
                 var childNode = {span: children[i], children: []}
                 node.children.push(childNode)
